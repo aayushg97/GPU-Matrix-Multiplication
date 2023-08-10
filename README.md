@@ -4,26 +4,15 @@ This project aims to optimize the task of matrix multiplication on GPU architect
 
 ## Usage
 
-To build the binary:<br>
-make -C build_T4 `cat src_todo_T4/OPTIONS.txt`
-
-To build the binary with cublas:<br>
-make -C build_T4 cublastest=1 `cat src_todo_T4/OPTIONS.txt`
-
-To clean the output files of the make command:<br>
-make -C build_T4 clean
-
-To Run:<br>
-./mmpy `cat src_todo_T4/OPTIONS_RUNTIME.txt` -n 256
-
-To run Script in tools folder:<br>
-./tools/run_ncu.sh
-
-If you get Permission denied error when executing a file:<br>
-chmod +x name_of_file eg: chmod +x tools/*
-
-Find GPU chipset:<br>
-lspci | grep -i --color 'vga\|3d\|2d'
+| Task | Command |
+| --- | --- |
+| Build the binary | `make -C build_T4 'cat src_todo_T4/OPTIONS.txt'` |
+| Build the binary with cublas | `make -C build_T4 cublastest=1 'cat src_todo_T4/OPTIONS.txt'` |
+| Clean the output files of the make command | `make -C build_T4 clean` |
+| Run matrix multiplication | `./mmpy 'cat src_todo_T4/OPTIONS_RUNTIME.txt' -n 256` |
+| Run Script in tools folder | `./tools/run_ncu.sh` |
+| Fix permission denied error when executing a file | `chmod +x <name_of_file>` |
+| Find GPU chipset | `lspci \| grep -i --color 'vga\|3d\|2d'` |
 
 ## Results
 
