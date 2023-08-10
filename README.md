@@ -1,5 +1,7 @@
 # Matrix Multiplication on GPU with CUDA
 
+This project aims to optimize the task of matrix multiplication on GPU architectures. To get optimal performance, the tiling algorithm, use of shared memory, thread level, and instruction level parallelism were explored. The [report](Report.pdf) explains all these methods in detail along with performance results.
+
 ## Usage
 
 To build the binary:<br>
@@ -22,6 +24,22 @@ chmod +x name_of_file eg: chmod +x tools/*
 
 Find GPU chipset:<br>
 lspci | grep -i --color 'vga\|3d\|2d'
+
+## Results
+
+### Comparison with Naive Implementation
+
+![](naive.png)
+
+### Comparison with BLAS and CuBLAS
+
+![](cublas.png)
+
+### Roofline plots
+
+![](roofline220.png)
+
+![](roofline320.png)
 
 ## References
 
